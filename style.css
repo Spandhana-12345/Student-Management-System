@@ -1,11 +1,11 @@
 /* ==========================================
    Student Management System
-   Week 5 - Task 5
-   Project Features
+   Final Web Development Project
+   Task 3 - Responsive Website
    ========================================== */
 
 
-/* General Styles */
+/* ---------- General Styles ---------- */
 
 * {
     margin: 0;
@@ -25,7 +25,7 @@ body {
 }
 
 
-/* Container */
+/* ---------- Container ---------- */
 
 .container {
     width: 90%;
@@ -34,13 +34,13 @@ body {
 }
 
 
-/* Header */
+/* ---------- Header ---------- */
 
 .header {
     background-color: #1f3c88;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 45px 20px;
 }
 
 .header h1 {
@@ -53,10 +53,13 @@ body {
 }
 
 
-/* Navigation */
+/* ---------- Navigation ---------- */
 
 .navbar {
     background-color: #162d63;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
@@ -71,14 +74,17 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 6px 10px;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    background-color: #1f3c88;
+    border-radius: 5px;
 }
 
 
-/* Main */
+/* ---------- Main ---------- */
 
 main {
     padding: 35px 0;
@@ -89,22 +95,27 @@ section {
 }
 
 
-/* Welcome */
+/* ---------- Welcome Section ---------- */
 
 .welcome-section {
     background-color: white;
     text-align: center;
-    padding: 35px;
+    padding: 40px 30px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .welcome-section h2 {
-    margin-bottom: 10px;
+    color: #1f3c88;
+    margin-bottom: 12px;
+}
+
+.welcome-section p {
+    margin-bottom: 8px;
 }
 
 
-/* Common Sections */
+/* ---------- Common Sections ---------- */
 
 .form-section,
 .search-section,
@@ -130,7 +141,7 @@ section {
 }
 
 
-/* Form */
+/* ---------- Form ---------- */
 
 .form-group {
     margin-bottom: 18px;
@@ -163,7 +174,7 @@ section {
 }
 
 
-/* Buttons */
+/* ---------- Buttons ---------- */
 
 .form-buttons {
     display: flex;
@@ -178,6 +189,7 @@ section {
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn-primary {
@@ -187,6 +199,7 @@ section {
 
 .btn-primary:hover {
     background-color: #162d63;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -211,10 +224,11 @@ section {
 .btn-edit:hover,
 .btn-delete:hover {
     opacity: 0.85;
+    transform: translateY(-2px);
 }
 
 
-/* Search and Filter */
+/* ---------- Search and Filter ---------- */
 
 .filter-controls {
     display: grid;
@@ -227,12 +241,13 @@ section {
 }
 
 
-/* Records Header */
+/* ---------- Records Header ---------- */
 
 .records-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -241,6 +256,7 @@ section {
     background-color: #eef2ff;
     padding: 12px 20px;
     border-radius: 8px;
+    min-width: 130px;
 }
 
 .student-counter span {
@@ -256,7 +272,7 @@ section {
 }
 
 
-/* Statistics */
+/* ---------- Statistics Grid ---------- */
 
 .statistics {
     display: grid;
@@ -269,7 +285,7 @@ section {
     background-color: #f5f7ff;
     border: 1px solid #dde3f5;
     border-radius: 8px;
-    padding: 18px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -287,7 +303,7 @@ section {
 }
 
 
-/* Student Cards */
+/* ---------- Student Cards Grid ---------- */
 
 .student-list {
     display: grid;
@@ -300,12 +316,19 @@ section {
     border-radius: 8px;
     padding: 20px;
     background-color: #fafafa;
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
 }
 
 .student-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
@@ -333,23 +356,15 @@ section {
 }
 
 
-/* No Records */
-
-.no-records {
-    text-align: center;
-    color: #777;
-    padding: 25px;
-}
-
-
-/* About */
+/* ---------- About ---------- */
 
 .about-section p {
     color: #555;
+    margin-bottom: 10px;
 }
 
 
-/* Footer */
+/* ---------- Footer ---------- */
 
 .footer {
     background-color: #162d63;
@@ -363,17 +378,34 @@ section {
 }
 
 
-/* Responsive Design */
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+
+/* ---------- Tablet ---------- */
 
 @media (max-width: 768px) {
+
+    .header {
+        padding: 35px 15px;
+    }
 
     .header h1 {
         font-size: 28px;
     }
 
+    .header p {
+        font-size: 15px;
+    }
+
     .nav-container {
-        flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: 14px;
     }
 
     .filter-controls {
@@ -381,7 +413,7 @@ section {
     }
 
     .statistics {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .student-list {
@@ -391,14 +423,77 @@ section {
     .records-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+    main {
+        padding: 20px 0;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .welcome-section,
+    .form-section,
+    .search-section,
+    .records-section,
+    .about-section {
+        padding: 20px 15px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .student-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .card-buttons .btn {
+        width: 100%;
     }
 
     .form-buttons {
         flex-direction: column;
     }
 
-    .btn {
+    .form-buttons .btn {
         width: 100%;
     }
+
+    .student-counter {
+        width: 100%;
+    }
+
 }

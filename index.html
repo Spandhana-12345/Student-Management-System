@@ -14,21 +14,15 @@
 
     <!-- Header -->
     <header class="header">
-
         <div class="container">
-
             <h1>Student Management System</h1>
-
             <p>Manage student records easily and efficiently</p>
-
         </div>
-
     </header>
 
 
     <!-- Navigation -->
     <nav class="navbar">
-
         <div class="container nav-container">
 
             <a href="#home">Home</a>
@@ -37,44 +31,46 @@
             <a href="#about">About</a>
 
         </div>
-
     </nav>
 
 
     <!-- Main Content -->
-    <main id="home">
+    <main>
 
         <div class="container">
 
             <!-- Welcome Section -->
-            <section class="welcome-section">
+            <section id="home" class="welcome-section">
 
-                <h2>Welcome to Student Management System</h2>
+                <h2>Welcome to the Student Management System</h2>
 
                 <p>
-                    This application helps you manage student information
-                    including names, email addresses, courses, and marks.
+                    This website helps manage student information in a simple,
+                    organized, and user-friendly way.
+                </p>
+
+                <p>
+                    You can add students, search records, update information,
+                    and remove student records.
                 </p>
 
             </section>
 
 
-            <!-- Add Student Section -->
+            <!-- Add Student Form -->
             <section id="add-student" class="form-section">
 
                 <h2>Add Student</h2>
 
                 <p class="section-description">
-                    Enter the student details below to create a new record.
+                    Enter the student's details using the form below.
                 </p>
 
                 <form id="studentForm">
 
                     <div class="form-group">
 
-                        <label for="studentName">
-                            Student Name
-                        </label>
+                        <label for="studentName">Student Name</label>
 
                         <input
                             type="text"
@@ -89,9 +85,7 @@
 
                     <div class="form-group">
 
-                        <label for="studentEmail">
-                            Email Address
-                        </label>
+                        <label for="studentEmail">Email Address</label>
 
                         <input
                             type="email"
@@ -106,39 +100,16 @@
 
                     <div class="form-group">
 
-                        <label for="studentCourse">
-                            Select Course
-                        </label>
+                        <label for="studentCourse">Course</label>
 
-                        <select
-                            id="studentCourse"
-                            name="studentCourse"
-                            required
-                        >
+                        <select id="studentCourse" name="studentCourse" required>
 
-                            <option value="">
-                                -- Select Course --
-                            </option>
-
-                            <option value="CSE">
-                                Computer Science and Engineering
-                            </option>
-
-                            <option value="CSE (AI-ML)">
-                                CSE (Artificial Intelligence & Machine Learning)
-                            </option>
-
-                            <option value="ECE">
-                                Electronics and Communication Engineering
-                            </option>
-
-                            <option value="EEE">
-                                Electrical and Electronics Engineering
-                            </option>
-
-                            <option value="IT">
-                                Information Technology
-                            </option>
+                            <option value="">Select Course</option>
+                            <option value="CSE">Computer Science Engineering</option>
+                            <option value="AIML">CSE - AI & ML</option>
+                            <option value="ECE">Electronics & Communication Engineering</option>
+                            <option value="EEE">Electrical & Electronics Engineering</option>
+                            <option value="Mechanical">Mechanical Engineering</option>
 
                         </select>
 
@@ -147,15 +118,13 @@
 
                     <div class="form-group">
 
-                        <label for="studentMarks">
-                            Marks
-                        </label>
+                        <label for="studentMarks">Marks</label>
 
                         <input
                             type="number"
                             id="studentMarks"
                             name="studentMarks"
-                            placeholder="Enter marks (0-100)"
+                            placeholder="Enter marks"
                             min="0"
                             max="100"
                             required
@@ -166,18 +135,12 @@
 
                     <div class="form-buttons">
 
-                        <button
-                            type="submit"
-                            class="btn btn-primary"
-                        >
+                        <button type="submit" class="btn btn-primary">
                             Add Student
                         </button>
 
-                        <button
-                            type="reset"
-                            class="btn btn-secondary"
-                        >
-                            Clear Form
+                        <button type="reset" class="btn btn-secondary">
+                            Reset
                         </button>
 
                     </div>
@@ -187,36 +150,32 @@
             </section>
 
 
-            <!-- Search and Filter Section -->
+            <!-- Search and Filter -->
             <section class="search-section">
 
                 <h2>Search & Filter Students</h2>
 
                 <p class="section-description">
-                    Search students or filter records according to course
-                    and result.
+                    Search student records or filter them by course.
                 </p>
-
 
                 <div class="filter-controls">
 
-                    <!-- Search -->
                     <div class="filter-group">
 
                         <label for="searchInput">
-                            Search by Name
+                            Search Student
                         </label>
 
                         <input
-                            type="search"
+                            type="text"
                             id="searchInput"
-                            placeholder="Enter student name..."
+                            placeholder="Search by name..."
                         >
 
                     </div>
 
 
-                    <!-- Course Filter -->
                     <div class="filter-group">
 
                         <label for="courseFilter">
@@ -225,81 +184,12 @@
 
                         <select id="courseFilter">
 
-                            <option value="all">
-                                All Courses
-                            </option>
-
-                            <option value="CSE">
-                                CSE
-                            </option>
-
-                            <option value="CSE (AI-ML)">
-                                CSE (AI-ML)
-                            </option>
-
-                            <option value="ECE">
-                                ECE
-                            </option>
-
-                            <option value="EEE">
-                                EEE
-                            </option>
-
-                            <option value="IT">
-                                IT
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- Result Filter -->
-                    <div class="filter-group">
-
-                        <label for="resultFilter">
-                            Filter by Result
-                        </label>
-
-                        <select id="resultFilter">
-
-                            <option value="all">
-                                All Results
-                            </option>
-
-                            <option value="Pass">
-                                Pass
-                            </option>
-
-                            <option value="Fail">
-                                Fail
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <!-- Sort -->
-                    <div class="filter-group">
-
-                        <label for="sortMarks">
-                            Sort by Marks
-                        </label>
-
-                        <select id="sortMarks">
-
-                            <option value="none">
-                                Default Order
-                            </option>
-
-                            <option value="high">
-                                Highest to Lowest
-                            </option>
-
-                            <option value="low">
-                                Lowest to Highest
-                            </option>
+                            <option value="all">All Courses</option>
+                            <option value="CSE">CSE</option>
+                            <option value="AIML">CSE - AI & ML</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EEE">EEE</option>
+                            <option value="Mechanical">Mechanical</option>
 
                         </select>
 
@@ -310,7 +200,7 @@
             </section>
 
 
-            <!-- Student Records Section -->
+            <!-- Student Records -->
             <section id="records" class="records-section">
 
                 <div class="records-header">
@@ -320,7 +210,7 @@
                         <h2>Student Records</h2>
 
                         <p class="section-description">
-                            View and manage all student information.
+                            View and manage registered students.
                         </p>
 
                     </div>
@@ -328,11 +218,9 @@
 
                     <div class="student-counter">
 
-                        <span>Showing Students</span>
+                        <span>Total Students</span>
 
-                        <strong id="studentCount">
-                            0
-                        </strong>
+                        <strong id="studentCount">3</strong>
 
                     </div>
 
@@ -342,37 +230,31 @@
                 <!-- Statistics -->
                 <div class="statistics">
 
-                    <div class="stat-card">
+                    <article class="stat-card">
 
                         <span>Total Students</span>
 
-                        <strong id="totalStudents">
-                            0
-                        </strong>
+                        <strong id="totalStudents">3</strong>
 
-                    </div>
+                    </article>
 
 
-                    <div class="stat-card">
+                    <article class="stat-card">
 
                         <span>Average Marks</span>
 
-                        <strong id="averageMarks">
-                            0
-                        </strong>
+                        <strong id="averageMarks">83</strong>
 
-                    </div>
+                    </article>
 
 
-                    <div class="stat-card">
+                    <article class="stat-card">
 
-                        <span>Highest Marks</span>
+                        <span>Top Marks</span>
 
-                        <strong id="highestMarks">
-                            0
-                        </strong>
+                        <strong id="topMarks">92</strong>
 
-                    </div>
+                    </article>
 
                 </div>
 
@@ -380,12 +262,153 @@
                 <!-- Student List -->
                 <div id="studentList" class="student-list">
 
-                    <p
-                        id="noRecords"
-                        class="no-records"
-                    >
-                        No student records available.
-                    </p>
+
+                    <!-- Student Card 1 -->
+                    <article class="student-card">
+
+                        <div class="student-card-header">
+
+                            <h3>Spandhana</h3>
+
+                            <span class="status-badge">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="student-details">
+
+                            <p>
+                                <strong>Email:</strong>
+                                spandhana@example.com
+                            </p>
+
+                            <p>
+                                <strong>Course:</strong>
+                                CSE - AI & ML
+                            </p>
+
+                            <p>
+                                <strong>Marks:</strong>
+                                92
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-buttons">
+
+                            <button class="btn btn-edit" type="button">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-delete" type="button">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Student Card 2 -->
+                    <article class="student-card">
+
+                        <div class="student-card-header">
+
+                            <h3>Rahul</h3>
+
+                            <span class="status-badge">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="student-details">
+
+                            <p>
+                                <strong>Email:</strong>
+                                rahul@example.com
+                            </p>
+
+                            <p>
+                                <strong>Course:</strong>
+                                CSE
+                            </p>
+
+                            <p>
+                                <strong>Marks:</strong>
+                                85
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-buttons">
+
+                            <button class="btn btn-edit" type="button">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-delete" type="button">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Student Card 3 -->
+                    <article class="student-card">
+
+                        <div class="student-card-header">
+
+                            <h3>Priya</h3>
+
+                            <span class="status-badge">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="student-details">
+
+                            <p>
+                                <strong>Email:</strong>
+                                priya@example.com
+                            </p>
+
+                            <p>
+                                <strong>Course:</strong>
+                                ECE
+                            </p>
+
+                            <p>
+                                <strong>Marks:</strong>
+                                72
+                            </p>
+
+                        </div>
+
+
+                        <div class="card-buttons">
+
+                            <button class="btn btn-edit" type="button">
+                                Edit
+                            </button>
+
+                            <button class="btn btn-delete" type="button">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </article>
+
 
                 </div>
 
@@ -395,13 +418,17 @@
             <!-- About Section -->
             <section id="about" class="about-section">
 
-                <h2>About This Project</h2>
+                <h2>About the Project</h2>
 
                 <p>
-                    The Student Management System is an interactive
-                    JavaScript project created for the Week 5 assignment.
-                    It allows users to add, search, filter, edit, sort,
-                    and delete student records.
+                    The Student Management System is a web development project
+                    created using HTML, CSS, and JavaScript. It provides a
+                    simple interface for managing student information.
+                </p>
+
+                <p>
+                    The project demonstrates semantic HTML, responsive design,
+                    CSS layouts, forms, and interactive features.
                 </p>
 
             </section>
@@ -414,17 +441,13 @@
     <!-- Footer -->
     <footer class="footer">
 
-        <div class="container">
+        <p>
+            &copy; 2026 Student Management System
+        </p>
 
-            <p>
-                &copy; 2026 Student Management System
-            </p>
-
-            <p>
-                Week 5 JavaScript Project
-            </p>
-
-        </div>
+        <p>
+            Developed as part of the Web Development Internship
+        </p>
 
     </footer>
 

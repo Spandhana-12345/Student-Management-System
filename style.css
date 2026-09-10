@@ -1,0 +1,404 @@
+/* ==========================================
+   Student Management System
+   Week 5 - Task 5
+   Project Features
+   ========================================== */
+
+
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.header {
+    background-color: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 17px;
+}
+
+
+/* Navigation */
+
+.navbar {
+    background-color: #162d63;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 15px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+    padding: 35px 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+/* Welcome */
+
+.welcome-section {
+    background-color: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-section h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Common Sections */
+
+.form-section,
+.search-section,
+.records-section,
+.about-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2,
+.search-section h2,
+.records-section h2,
+.about-section h2 {
+    margin-bottom: 8px;
+    color: #1f3c88;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label,
+.filter-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: #1f3c88;
+}
+
+
+/* Buttons */
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #1f3c88;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #162d63;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #ccc;
+}
+
+.btn-edit {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    opacity: 0.85;
+}
+
+
+/* Search and Filter */
+
+.filter-controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.filter-group {
+    width: 100%;
+}
+
+
+/* Records Header */
+
+.records-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.student-counter {
+    text-align: center;
+    background-color: #eef2ff;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.student-counter span {
+    display: block;
+    font-size: 13px;
+    color: #666;
+}
+
+.student-counter strong {
+    display: block;
+    font-size: 28px;
+    color: #1f3c88;
+}
+
+
+/* Statistics */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background-color: #f5f7ff;
+    border: 1px solid #dde3f5;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+}
+
+.stat-card span {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    display: block;
+    color: #1f3c88;
+    font-size: 25px;
+}
+
+
+/* Student Cards */
+
+.student-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.student-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.student-card-header h3 {
+    color: #1f3c88;
+}
+
+.status-badge {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.student-details p {
+    margin-bottom: 6px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+/* No Records */
+
+.no-records {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+}
+
+
+/* About */
+
+.about-section p {
+    color: #555;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: #162d63;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .student-list {
+        grid-template-columns: 1fr;
+    }
+
+    .records-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

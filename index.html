@@ -70,7 +70,9 @@
 
                     <div class="form-group">
 
-                        <label for="studentName">Student Name</label>
+                        <label for="studentName">
+                            Student Name
+                        </label>
 
                         <input
                             type="text"
@@ -85,7 +87,9 @@
 
                     <div class="form-group">
 
-                        <label for="studentEmail">Email Address</label>
+                        <label for="studentEmail">
+                            Email Address
+                        </label>
 
                         <input
                             type="email"
@@ -100,16 +104,39 @@
 
                     <div class="form-group">
 
-                        <label for="studentCourse">Course</label>
+                        <label for="studentCourse">
+                            Course
+                        </label>
 
-                        <select id="studentCourse" name="studentCourse" required>
+                        <select
+                            id="studentCourse"
+                            name="studentCourse"
+                            required
+                        >
 
-                            <option value="">Select Course</option>
-                            <option value="CSE">Computer Science Engineering</option>
-                            <option value="AIML">CSE - AI & ML</option>
-                            <option value="ECE">Electronics & Communication Engineering</option>
-                            <option value="EEE">Electrical & Electronics Engineering</option>
-                            <option value="Mechanical">Mechanical Engineering</option>
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option value="CSE">
+                                Computer Science Engineering
+                            </option>
+
+                            <option value="CSE (AI-ML)">
+                                CSE (AI-ML)
+                            </option>
+
+                            <option value="ECE">
+                                Electronics & Communication Engineering
+                            </option>
+
+                            <option value="EEE">
+                                Electrical & Electronics Engineering
+                            </option>
+
+                            <option value="Mechanical">
+                                Mechanical Engineering
+                            </option>
 
                         </select>
 
@@ -118,7 +145,9 @@
 
                     <div class="form-group">
 
-                        <label for="studentMarks">Marks</label>
+                        <label for="studentMarks">
+                            Marks
+                        </label>
 
                         <input
                             type="number"
@@ -135,11 +164,17 @@
 
                     <div class="form-buttons">
 
-                        <button type="submit" class="btn btn-primary">
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
                             Add Student
                         </button>
 
-                        <button type="reset" class="btn btn-secondary">
+                        <button
+                            type="reset"
+                            class="btn btn-secondary"
+                        >
                             Reset
                         </button>
 
@@ -156,11 +191,13 @@
                 <h2>Search & Filter Students</h2>
 
                 <p class="section-description">
-                    Search student records or filter them by course.
+                    Search student records or filter them by course,
+                    result, and marks.
                 </p>
 
                 <div class="filter-controls">
 
+                    <!-- Search -->
                     <div class="filter-group">
 
                         <label for="searchInput">
@@ -176,6 +213,7 @@
                     </div>
 
 
+                    <!-- Course Filter -->
                     <div class="filter-group">
 
                         <label for="courseFilter">
@@ -184,12 +222,81 @@
 
                         <select id="courseFilter">
 
-                            <option value="all">All Courses</option>
-                            <option value="CSE">CSE</option>
-                            <option value="AIML">CSE - AI & ML</option>
-                            <option value="ECE">ECE</option>
-                            <option value="EEE">EEE</option>
-                            <option value="Mechanical">Mechanical</option>
+                            <option value="all">
+                                All Courses
+                            </option>
+
+                            <option value="CSE">
+                                CSE
+                            </option>
+
+                            <option value="CSE (AI-ML)">
+                                CSE (AI-ML)
+                            </option>
+
+                            <option value="ECE">
+                                ECE
+                            </option>
+
+                            <option value="EEE">
+                                EEE
+                            </option>
+
+                            <option value="Mechanical">
+                                Mechanical
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Result Filter -->
+                    <div class="filter-group">
+
+                        <label for="resultFilter">
+                            Filter by Result
+                        </label>
+
+                        <select id="resultFilter">
+
+                            <option value="all">
+                                All Results
+                            </option>
+
+                            <option value="Pass">
+                                Pass
+                            </option>
+
+                            <option value="Fail">
+                                Fail
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Sort Marks -->
+                    <div class="filter-group">
+
+                        <label for="sortMarks">
+                            Sort by Marks
+                        </label>
+
+                        <select id="sortMarks">
+
+                            <option value="none">
+                                Default Order
+                            </option>
+
+                            <option value="high">
+                                Highest to Lowest
+                            </option>
+
+                            <option value="low">
+                                Lowest to Highest
+                            </option>
 
                         </select>
 
@@ -220,7 +327,9 @@
 
                         <span>Total Students</span>
 
-                        <strong id="studentCount">3</strong>
+                        <strong id="studentCount">
+                            3
+                        </strong>
 
                     </div>
 
@@ -232,27 +341,39 @@
 
                     <article class="stat-card">
 
-                        <span>Total Students</span>
+                        <span>
+                            Total Students
+                        </span>
 
-                        <strong id="totalStudents">3</strong>
-
-                    </article>
-
-
-                    <article class="stat-card">
-
-                        <span>Average Marks</span>
-
-                        <strong id="averageMarks">83</strong>
+                        <strong id="totalStudents">
+                            3
+                        </strong>
 
                     </article>
 
 
                     <article class="stat-card">
 
-                        <span>Top Marks</span>
+                        <span>
+                            Average Marks
+                        </span>
 
-                        <strong id="topMarks">92</strong>
+                        <strong id="averageMarks">
+                            67.67
+                        </strong>
+
+                    </article>
+
+
+                    <article class="stat-card">
+
+                        <span>
+                            Highest Marks
+                        </span>
+
+                        <strong id="highestMarks">
+                            85
+                        </strong>
 
                     </article>
 
@@ -262,16 +383,27 @@
                 <!-- Student List -->
                 <div id="studentList" class="student-list">
 
+                    <!-- No Records Message -->
+                    <p
+                        id="noRecords"
+                        class="no-records"
+                        style="display: none;"
+                    >
+                        No student records found.
+                    </p>
+
 
                     <!-- Student Card 1 -->
                     <article class="student-card">
 
                         <div class="student-card-header">
 
-                            <h3>Spandhana</h3>
+                            <h3>
+                                Spandhana
+                            </h3>
 
                             <span class="status-badge">
-                                Active
+                                Pass
                             </span>
 
                         </div>
@@ -286,12 +418,12 @@
 
                             <p>
                                 <strong>Course:</strong>
-                                CSE - AI & ML
+                                CSE (AI-ML)
                             </p>
 
                             <p>
                                 <strong>Marks:</strong>
-                                92
+                                85
                             </p>
 
                         </div>
@@ -299,11 +431,17 @@
 
                         <div class="card-buttons">
 
-                            <button class="btn btn-edit" type="button">
+                            <button
+                                class="btn btn-edit"
+                                type="button"
+                            >
                                 Edit
                             </button>
 
-                            <button class="btn btn-delete" type="button">
+                            <button
+                                class="btn btn-delete"
+                                type="button"
+                            >
                                 Delete
                             </button>
 
@@ -317,10 +455,12 @@
 
                         <div class="student-card-header">
 
-                            <h3>Rahul</h3>
+                            <h3>
+                                Rahul
+                            </h3>
 
                             <span class="status-badge">
-                                Active
+                                Pass
                             </span>
 
                         </div>
@@ -340,7 +480,7 @@
 
                             <p>
                                 <strong>Marks:</strong>
-                                85
+                                72
                             </p>
 
                         </div>
@@ -348,11 +488,17 @@
 
                         <div class="card-buttons">
 
-                            <button class="btn btn-edit" type="button">
+                            <button
+                                class="btn btn-edit"
+                                type="button"
+                            >
                                 Edit
                             </button>
 
-                            <button class="btn btn-delete" type="button">
+                            <button
+                                class="btn btn-delete"
+                                type="button"
+                            >
                                 Delete
                             </button>
 
@@ -366,10 +512,12 @@
 
                         <div class="student-card-header">
 
-                            <h3>Priya</h3>
+                            <h3>
+                                Priya
+                            </h3>
 
                             <span class="status-badge">
-                                Active
+                                Fail
                             </span>
 
                         </div>
@@ -389,7 +537,7 @@
 
                             <p>
                                 <strong>Marks:</strong>
-                                72
+                                46
                             </p>
 
                         </div>
@@ -397,18 +545,23 @@
 
                         <div class="card-buttons">
 
-                            <button class="btn btn-edit" type="button">
+                            <button
+                                class="btn btn-edit"
+                                type="button"
+                            >
                                 Edit
                             </button>
 
-                            <button class="btn btn-delete" type="button">
+                            <button
+                                class="btn btn-delete"
+                                type="button"
+                            >
                                 Delete
                             </button>
 
                         </div>
 
                     </article>
-
 
                 </div>
 
@@ -418,17 +571,21 @@
             <!-- About Section -->
             <section id="about" class="about-section">
 
-                <h2>About the Project</h2>
+                <h2>
+                    About the Project
+                </h2>
 
                 <p>
-                    The Student Management System is a web development project
-                    created using HTML, CSS, and JavaScript. It provides a
-                    simple interface for managing student information.
+                    The Student Management System is a web development
+                    project created using HTML, CSS, and JavaScript.
+                    It provides a simple interface for managing
+                    student information.
                 </p>
 
                 <p>
-                    The project demonstrates semantic HTML, responsive design,
-                    CSS layouts, forms, and interactive features.
+                    The project demonstrates semantic HTML, responsive
+                    design, CSS layouts, forms, DOM manipulation,
+                    and interactive JavaScript features.
                 </p>
 
             </section>
@@ -452,6 +609,7 @@
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
